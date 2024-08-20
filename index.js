@@ -1,6 +1,7 @@
 import express from 'express';
 import { servicesData } from './data/servicesData.js';
 import { members } from './data/members.js';
+import { students } from './data/students.js';
 
 const app = express();
 const port = 3000;
@@ -92,6 +93,34 @@ app.get('/nuolaidos/pavasario-nuolaida', (req, res) => {
 app.get('/nuolaidos/*', (req, res) => {
     return res.send('Gaila, bet tokia nuolaida neveikia');
 });
+
+app.get('/students', (req, res) => {
+    return res.send('Mokosi 4 studentai: Jonas, Maryte, Petras ir Ona.');
+});
+
+app.get('/students/jonas', (req, res) => {
+    return res.send('Studentas, vardu Jonas yra 99 metu amziaus ir yra vedes.');
+});
+
+app.get('/students/chuck', (req, res) => {
+    return res.send('Studento, vardu Chuck nera.');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
